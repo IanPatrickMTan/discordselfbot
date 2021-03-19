@@ -54,12 +54,10 @@ class bot:
             except:
                 pass
         self.driver.find_element_by_xpath('//*[@class="input-1Rv96N"]').send_keys(f'\n')
-        while 1:
-            try:
-                self.driver.find_element_by_xpath('//*[@class="button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeSmall-2cSMqn grow-q77ONN"]').click()
-                break
-            except:
-                pass
+        try:
+            self.driver.find_element_by_xpath('//*[@class="button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeSmall-2cSMqn grow-q77ONN"]').click()
+        except:
+            self.driver.find_element_by_xpath('//*[@class="button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeMedium-1AC_Sl fullWidth-1orjjo grow-q77ONN"]').click()
     
     def removeUser(self, user):
         ActionChains(self.driver).context_click(self.driver.find_elements_by_xpath('//*[@class="members-1998pB thin-1ybCId scrollerBase-289Jih fade-2kXiP2"]//*')[1:-1][user]).perform()
