@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+discordselfbot/__init__.py
+discordselfbot/discordselfbot.py
+discordselfbot.egg-info/PKG-INFO
+discordselfbot.egg-info/SOURCES.txt
+discordselfbot.egg-info/dependency_links.txt
+discordselfbot.egg-info/requires.txt
+discordselfbot.egg-info/top_level.txt
