@@ -63,7 +63,7 @@ class bot:
         ActionChains(self.driver).context_click(self.driver.find_elements_by_xpath('//*[@class="members-1998pB thin-1ybCId scrollerBase-289Jih fade-2kXiP2"]//*')[1:-1][user]).perform()
         self.driver.find_element_by_xpath('//*[@class="item-1tOPte labelContainer-1BLJti colorDanger-2qLCe1 colorDefault-2K3EoJ"]').click()
     
-    def leaveDm(self):
+    def leave(self):
         href = self.driver.current_url.replace('https://discord.com', '')
         ActionChains(self.driver).context_click(self.driver.find_element_by_xpath(f'//*[@href="{href}"]')).perform()
         self.driver.find_element_by_class_name('item-1tOPte labelContainer-1BLJti colorDanger-2qLCe1 colorDefault-2K3EoJ').click()
